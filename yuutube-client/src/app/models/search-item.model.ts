@@ -1,3 +1,5 @@
+import { Snippet } from './snippet.model';
+
 export interface SearchItem {
   kind: string;
   etag: string;
@@ -10,33 +12,4 @@ export interface SearchItem {
     favoriteCount: string,
     commentCount: string
   };
-}
-
-interface Snippet {
-  publishedAt: string;
-  channelId: string;
-  title: string;
-  description: string;
-  thumbnails: {
-    default: Thumbnail,
-    medium: Thumbnail,
-    high: Thumbnail,
-    standard: Thumbnail,
-    maxres: Thumbnail,
-  };
-  channelTitle: string;
-  tags: string[];
-  categoryId: string;
-  liveBroadcastContent: string;
-  localized: {
-    title: string,
-    description: string,
-  };
-  defaultAudioLanguage: string;
-}
-
-interface Thumbnail {
-  url: string;
-  width: number;
-  height: number;
 }
