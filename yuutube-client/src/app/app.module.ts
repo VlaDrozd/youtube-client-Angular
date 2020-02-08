@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SortOptionsComponent } from './components/sort-options/sort-options.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { SearchItemComponent } from './components/search-item/search-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    SortOptionsComponent,
+    SearchResultsComponent,
+    SearchItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
