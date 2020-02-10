@@ -6,12 +6,9 @@ import { SearchResponse } from 'src/app/models/search-response.model';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss']
 })
-export class SearchResultsComponent implements OnInit, SearchResponse {
+export class SearchResultsComponent implements OnInit {
 
-  public kind: string;
-  public etag: string;
-  public pageInfo: { totalResults: number; resultsPerPage: number; };
-  public items: import('../../models/search-item.model').SearchItem[];
+  public response: SearchResponse;
 
   constructor() { }
 
