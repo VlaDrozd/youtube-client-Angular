@@ -33,6 +33,7 @@ interface Snippet {
     description: string,
   };
   defaultAudioLanguage: string;
+  defaultLanguage?: string;
 }
 
 interface Thumbnail {
