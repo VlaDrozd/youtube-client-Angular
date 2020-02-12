@@ -1,3 +1,17 @@
-.cont {
-  height: 100px;
+.sort-options {
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.sort-options-input {
+  display: flex;
+  align-items: center;
 }

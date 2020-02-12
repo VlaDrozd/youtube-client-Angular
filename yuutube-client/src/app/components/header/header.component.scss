@@ -12,7 +12,7 @@
     }
 
     &-cover {
-      width: 90%;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -63,13 +63,14 @@
   }
 
   &-user {
-    width: max-content;
+    width: fit-content;
     margin-left: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &__name {
+      width: max-content;
       margin-right: 8px;
       font-size: 12px;
       line-height: 14px;
