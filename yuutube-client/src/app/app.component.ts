@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchResponse } from './models/search-response.model';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public sortType: string = 'date';
+  public searchResponse: SearchResponse;
 
   public getSortType(type: string): void {
     this.sortType = type;
     console.log(type);
+  }
+
+  public getResponse(response: SearchResponse): void {
+    this.searchResponse = response;
   }
 }
