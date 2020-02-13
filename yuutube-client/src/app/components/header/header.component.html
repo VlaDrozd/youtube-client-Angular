@@ -18,6 +18,6 @@
     </div>
   </div>
   <div class="header-sortOptions" *ngIf="isSettingsOpened">
-    <app-sort-options></app-sort-options>
+    <app-sort-options (setSortType)="sendSortType.emit($event)"></app-sort-options>
   </div>
 </header>

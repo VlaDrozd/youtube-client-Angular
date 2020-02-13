@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title: string = 'yuutube-client';
+  public sortType: string = 'date';
+
+  public getSortType(type: string): void {
+    this.sortType = type;
+    console.log(type);
+  }
 }

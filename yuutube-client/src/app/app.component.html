@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-search-results></app-search-results>
+<app-header (sendSortType)="getSortType($event)"></app-header>
+<app-search-results [sortType]="sortType"></app-search-results>

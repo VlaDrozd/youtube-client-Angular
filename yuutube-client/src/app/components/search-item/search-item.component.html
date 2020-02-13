@@ -7,19 +7,19 @@
         <p class="item-stats-element__count">{{ item.statistics.viewCount }}</p>
       </div>
       <div class="item-stats-element">
-        <img class="item-stats-element__icon" src="../../../assets/imgs/likes.svg" alt="views">
+        <img class="item-stats-element__icon" src="../../../assets/imgs/likes.svg" alt="likes">
         <p class="item-stats-element__count">{{ item.statistics.likeCount }}</p>
       </div>
       <div class="item-stats-element">
-        <img class="item-stats-element__icon" src="../../../assets/imgs/dislikes.svg" alt="views">
+        <img class="item-stats-element__icon" src="../../../assets/imgs/dislikes.svg" alt="dislikes">
         <p class="item-stats-element__count">{{ item.statistics.dislikeCount }}</p>
       </div>
       <div class="item-stats-element">
-        <img class="item-stats-element__icon" src="../../../assets/imgs/comments.svg" alt="views">
+        <img class="item-stats-element__icon" src="../../../assets/imgs/comments.svg" alt="comments">
         <p class="item-stats-element__count">{{ item.statistics.commentCount }}</p>
       </div>
     </div>
-    <h2 class="item__title">{{ item.snippet.title.substr(0, 17) + '...' }}</h2>
+    <h2 class="item__title">{{ (item.snippet.title | slice:0:17) + '...' }}</h2>
     <a class="item__link" href="{{ 'https://www.youtube.com/watch?v=' + item.id }}">more...</a>
   </div>
 </div>
