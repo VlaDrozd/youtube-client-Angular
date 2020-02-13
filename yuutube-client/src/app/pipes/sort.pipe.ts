@@ -19,9 +19,10 @@ export class SortPipe implements PipeTransform {
       type = type.toLowerCase().trim();
       return values.filter(
         (item: SearchItem) =>
-          !!(item.snippet.tags.join(' ').toLowerCase().indexOf(type) + 1) ||
-          !!(item.snippet.title.toLowerCase().indexOf(type) + 1) ||
-          !!(item.snippet.description.toLowerCase().indexOf(type) + 1)
+          item.snippet.tags.join(' ').toLowerCase().includes(type) ||
+          item.snippet.title.toLowerCase().includes(type) ||
+          item.snippet.description.toLowerCase().includes(type) ||
+          item.snippet.channelTitle.toLowerCase().includes(type)
       );
     } else {
       return values;
