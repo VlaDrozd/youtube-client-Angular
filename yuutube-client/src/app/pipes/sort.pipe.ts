@@ -15,12 +15,13 @@ export class SortPipe implements PipeTransform {
     if (type === 'views') {
       return values.sort((item1: SearchItem, item2: SearchItem) =>
         +item1.statistics.viewCount - +item2.statistics.viewCount).reverse();
-    } else if (type !== '') {
+    } else if (type) {
+      type = type.toLowerCase().trim();
       return values.filter(
         (item: SearchItem) =>
-          !!(item.snippet.tags.join(' ').indexOf(type) + 1) ||
-          !!(item.snippet.title.indexOf(type) + 1) ||
-          !!(item.snippet.description.indexOf(type) + 1)
+          !!(item.snippet.tags.join(' ').toLowerCase().indexOf(type) + 1) ||
+          !!(item.snippet.title.toLowerCase().indexOf(type) + 1) ||
+          !!(item.snippet.description.toLowerCase().indexOf(type) + 1)
       );
     } else {
       return values;
