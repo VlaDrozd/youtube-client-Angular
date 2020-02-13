@@ -15,19 +15,4 @@ export class SearchItemComponent implements OnInit {
   public ngOnInit(): void {
   }
 
-  public getBorderColor(): string {
-    let days: number = (new Date().getTime() -
-      new Date(this.item.snippet.publishedAt).getTime()) / (1000 * 60 * 60 * 24);
-    if (days < 7) {
-      return '#2F80ED';
-    }
-    if (days < 31) {
-      return '#27AE60';
-    }
-    if (days < 183) {
-      return '#F2C94C';
-    }
-    return '#EB5757';
-  }
-
 }

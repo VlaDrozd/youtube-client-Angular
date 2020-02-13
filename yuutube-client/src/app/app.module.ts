@@ -9,6 +9,7 @@ import { SortOptionsComponent } from './components/sort-options/sort-options.com
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { SearchItemComponent } from './components/search-item/search-item.component';
 import { SortPipe } from './pipes/sort.pipe';
+import { ColorByDateDirective } from './directives/color-by-date.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SortPipe } from './pipes/sort.pipe';
     SortOptionsComponent,
     SearchResultsComponent,
     SearchItemComponent,
-    SortPipe
+    SortPipe,
+    ColorByDateDirective
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<div class="item" [style.background] = "getBorderColor()">
+<div class="item" [appColorByDate] = "item.snippet.publishedAt">
   <div class="item-container">
     <img class="item__preview" src="{{ item.snippet.thumbnails.standard.url }}" alt="preview">
     <div class="item-stats">
