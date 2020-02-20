@@ -4,6 +4,6 @@
   <a class="sort-options__option" href="#" (click)="setSortType.emit('views')">count of views</a>
   <form class="sort-options-input">
     <p class="sort-options-input__option">by word or sentance</p>
-    <input class="sort-options-input__text" type="text" (input)="setSortType.emit(keyword)" [(ngModel)]="keyword" name="key">
+    <input class="sort-options-input__text" type="text" (input)="onInit()" [(ngModel)]="keyword" name="key">
   </form>
 </div>

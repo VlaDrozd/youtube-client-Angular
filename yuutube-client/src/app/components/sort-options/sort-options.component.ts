@@ -10,9 +10,19 @@ export class SortOptionsComponent implements OnInit {
 
   public keyword: string = '';
 
+  // tslint:disable-next-line: no-any
+  public debounce: any;
+
   constructor() { }
 
   public ngOnInit(): void {
+  }
+
+  public onInit(): void {
+    if (this.debounce) {
+      clearTimeout(this.debounce);
+    }
+    this.debounce = setTimeout(() => this.setSortType.emit(this.keyword), 500);
   }
 
 }
