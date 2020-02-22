@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { SearchResponse } from 'src/app/models/search-response.model';
-import { searchRes } from '../../../assets/response/response';
+import { SearchResponse } from '../../../youtube-module/models/search-response.model';
+import { searchRes } from '../../../../assets/response/response';
 
 @Component({
   selector: 'app-header',

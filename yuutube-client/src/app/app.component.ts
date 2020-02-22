@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SearchResponse } from './models/search-response.model';
+import { SearchResponse } from './youtube-module/models/search-response.model';
 
 @Component({
   selector: 'app-root',

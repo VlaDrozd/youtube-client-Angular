@@ -1,4 +1,4 @@
-import { SearchResponse } from 'src/app/models/search-response.model';
+import { SearchResponse } from 'src/app/youtube-module/models/search-response.model';
 
 export const searchRes: SearchResponse = {
   'kind': 'youtube#videoListResponse',
