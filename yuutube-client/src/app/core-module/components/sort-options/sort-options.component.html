@@ -1,7 +1,7 @@
 <div class="sort-options">
   <p class="sort-options__text">Sorting by: </p>
-  <a class="sort-options__option" href="#" (click)="setSortType.emit('date')">date</a>
-  <a class="sort-options__option" href="#" (click)="setSortType.emit('views')">count of views</a>
+  <a class="sort-options__option" href="#" (click)="ssortService.setSort('date')">date</a>
+  <a class="sort-options__option" href="#" (click)="sortService.setSort('views')">count of views</a>
   <form class="sort-options-input">
     <p class="sort-options-input__option">by word or sentance</p>
     <input class="sort-options-input__text" type="text" (input)="onInit()" [(ngModel)]="keyword" name="key">

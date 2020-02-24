@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { SearchResponse } from '../../models/search-response.model';
+import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../../core-module/services/searchService/search.service';
+import { SortServiceService } from 'src/app/core-module/services/sortService/sort-service.service';
 
 @Component({
   selector: 'app-search-results',
@@ -8,13 +9,11 @@ import { SearchResponse } from '../../models/search-response.model';
 })
 export class SearchResultsComponent implements OnInit {
 
-  @Input() public response: SearchResponse;
-
-  @Input() public sortType: string = 'date';
-
-  constructor() { }
+  constructor(private searchService: SearchService, private sortService: SortServiceService) {
+  }
 
   public ngOnInit(): void {
+
   }
 
 }

@@ -1,6 +1,5 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { SearchResponse } from '../../../youtube-module/models/search-response.model';
-import { searchRes } from '../../../../assets/response/response';
+import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../services/searchService/search.service';
 
 @Component({
   selector: 'app-header',
@@ -8,15 +7,19 @@ import { searchRes } from '../../../../assets/response/response';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() public sendSortType: EventEmitter<string> = new EventEmitter();
-  @Output() public sendResponse: EventEmitter<SearchResponse> = new EventEmitter();
-
-  public searchResponse: SearchResponse = searchRes;
   public isSettingsOpened: boolean = false;
+  public request: string;
 
-  constructor() { }
+  constructor(private searchService: SearchService) { }
 
   public ngOnInit(): void {
+  }
+
+  public sendRequest(): void {
+    let isSuccess: Boolean = this.searchService.getVideos(this.request);
+    while (!isSuccess) {
+      isSuccess = this.searchService.getVideos(this.request);
+    }
   }
 
 }

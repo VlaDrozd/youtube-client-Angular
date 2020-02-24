@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SortServiceService } from '../../services/sortService/sort-service.service';
 
 @Component({
   selector: 'app-sort-options',
@@ -6,14 +7,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./sort-options.component.scss']
 })
 export class SortOptionsComponent implements OnInit {
-  @Output() public setSortType: EventEmitter<string> = new EventEmitter();
-
   public keyword: string = '';
 
   // tslint:disable-next-line: no-any
   public debounce: any;
 
-  constructor() { }
+  constructor(private sortService: SortServiceService) { }
 
   public ngOnInit(): void {
   }
@@ -22,7 +21,7 @@ export class SortOptionsComponent implements OnInit {
     if (this.debounce) {
       clearTimeout(this.debounce);
     }
-    this.debounce = setTimeout(() => this.setSortType.emit(this.keyword), 500);
+    this.debounce = setTimeout(() => this.sortService.setSort(this.keyword), 500);
   }
 
 }
