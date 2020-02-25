@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SearchResponse } from './models/search-response.model';
+import { SearchItem } from './models/search-item.model';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +8,14 @@ import { SearchResponse } from './models/search-response.model';
 })
 export class AppComponent {
   public sortType: string = 'date';
-  public searchResponse: SearchResponse;
+  public searchResponse: SearchItem[] = [];
 
   public getSortType(type: string): void {
     this.sortType = type;
     console.log(type);
   }
 
-  public getResponse(response: SearchResponse): void {
+  public getResponse(response: SearchItem[]): void {
     this.searchResponse = response;
   }
 }
