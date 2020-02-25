@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { SortOptionsComponent } from './components/sort-options/sort-options.component';
 import { SortServiceService } from './services/sortService/sort-service.service';
 import { RouterModule } from '@angular/router';
-import { SearchService } from './services/searchService/search.service';
 
 @NgModule({
   declarations: [
@@ -21,6 +20,6 @@ import { SearchService } from './services/searchService/search.service';
     RouterModule
   ],
   exports: [HeaderComponent],
-  providers: [SortServiceService, SearchService]
+  providers: [SortServiceService]
 })
 export class CoreModuleModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchService } from '../../services/searchService/search.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +8,23 @@ import { SearchService } from '../../services/searchService/search.service';
 })
 export class HeaderComponent implements OnInit {
   public isSettingsOpened: boolean = false;
-  public request: string;
+  public request: string = '';
 
-  constructor(private searchService: SearchService) { }
+  constructor(private router: Router) { }
 
   public ngOnInit(): void {
   }
 
   public sendRequest(): void {
-    let isSuccess: Boolean = this.searchService.getVideos(this.request);
-    while (!isSuccess) {
-      isSuccess = this.searchService.getVideos(this.request);
+    if (this.request) {
+      this.router.navigate(
+        ['/'],
+        {
+          queryParams: {
+            'search_query': this.request,
+          }
+        }
+      );
     }
   }
 

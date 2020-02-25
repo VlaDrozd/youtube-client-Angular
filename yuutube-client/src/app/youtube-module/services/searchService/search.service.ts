@@ -3,7 +3,7 @@ import { searchRes } from '../../../../assets/response/response';
 import { SearchItem } from 'src/app/shared-module/models/search-item.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SearchService {
 

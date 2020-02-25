@@ -5,6 +5,7 @@ import { SearchItemComponent } from './components/search-item/search-item.compon
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { ColorByDateDirective } from './directives/color-by-date.directive';
 import { SortPipe } from './pipes/sort.pipe';
+import { SearchService } from './services/searchService/search.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SortPipe } from './pipes/sort.pipe';
   imports: [
     CommonModule
   ],
+  providers: [SearchService],
   exports: [
     SearchItemComponent,
     SearchResultsComponent
