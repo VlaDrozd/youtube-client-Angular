@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { searchRes } from '../../../../assets/response/response';
-import { SearchResponse } from 'src/app/shared-module/models/search-response.model';
+import { SearchItem } from 'src/app/shared-module/models/search-item.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchService {
 
-  public response: SearchResponse;
+  public response: SearchItem[] = [];
 
   constructor() { }
 
-  public getVideos(reques: string): boolean {
-    this.response = searchRes;
+  public getVideos(request: string): boolean {
+    this.response = searchRes.items;
     return !!this.response;
   }
 }
