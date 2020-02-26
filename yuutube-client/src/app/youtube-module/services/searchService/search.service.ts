@@ -17,10 +17,8 @@ export class SearchService {
   }
 
   public getByID(id: string): SearchItem {
-    function finder(item: SearchItem): boolean {
+    return searchRes.items.find(function (item: SearchItem): boolean {
       return item.id === id;
-    }
-    let itemm: SearchItem = searchRes.items.find(finder);
-    return itemm;
+    });
   }
 }
