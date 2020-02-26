@@ -6,11 +6,13 @@ import { AuthModuleModule } from './auth-module/auth-module.module';
 import { AuthorizationComponent } from './auth-module/components/authorization/authorization.component';
 import { CoreModuleModule } from './core-module/core-module.module';
 import { NotFound404Component } from './core-module/components/not-found404/not-found404.component';
+import { DetailedInformationComponent } from './youtube-module/components/detailed-information/detailed-information.component';
 
 const routes: Routes = [
-  { path: '', component: SearchResultsComponent},
-    { path: 'auth', component: AuthorizationComponent},
-    { path: '**', component: NotFound404Component}
+  { path: '', component: SearchResultsComponent },
+  { path: 'auth', component: AuthorizationComponent },
+  { path: 'video/:id', component: DetailedInformationComponent },
+  { path: '**', component: NotFound404Component },
 ];
 
 @NgModule({

@@ -18,7 +18,6 @@ import { AppComponent } from './app.component';
     CoreModuleModule,
     YoutubeModuleModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

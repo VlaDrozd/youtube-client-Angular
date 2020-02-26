@@ -20,6 +20,6 @@
       </div>
     </div>
     <h2 class="item__title">{{ (item.snippet.title | slice:0:17) + '...' }}</h2>
-    <a class="item__link" href="{{ 'https://www.youtube.com/watch?v=' + item.id }}">more...</a>
+    <a [routerLink]="['video', item.id]" class="item__link">more...</a>
   </div>
 </div>

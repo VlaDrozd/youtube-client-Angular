@@ -1,5 +1,6 @@
 import { Input, Component, OnInit } from '@angular/core';
 import { SearchItem } from '../../../shared-module/models/search-item.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-item',
