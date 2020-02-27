@@ -1,21 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { FormsModule } from '@angular/forms';
-import { AuthorizationService } from './services/auth-service/authorization.service';
+import { RouterModule, Routes } from '@angular/router';
+
+import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { UserComponent } from './components/user/user.component';
-import { RouterModule } from '@angular/router';
+
+import { AuthorizationService } from './services/auth-service/authorization.service';
+
+const routes: Routes = [
+  {
+    path: '', component: AuthorizationComponent
+  }
+];
 
 @NgModule({
   declarations: [AuthorizationComponent, UserComponent],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule.forChild(routes)
   ],
   exports: [
     AuthorizationComponent,
-    UserComponent
+    UserComponent,
+    RouterModule,
   ],
   providers: [AuthorizationService]
 })

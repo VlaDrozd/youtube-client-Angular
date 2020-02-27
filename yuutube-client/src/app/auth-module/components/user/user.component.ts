@@ -13,4 +13,5 @@ export class UserComponent implements OnInit {
 
   public ngOnInit(): void {
   }
+
 }
