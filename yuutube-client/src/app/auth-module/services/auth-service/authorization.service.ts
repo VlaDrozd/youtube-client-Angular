@@ -24,7 +24,7 @@ export class AuthorizationService {
   public login(login: string, password: string): void {
     let logInfo: LoginInfo = {
       token: 'token',
-      login: 'login'
+      login: login
     };
     localStorage.setItem('isAuth', JSON.stringify(logInfo));
     this.isLogged = !this.isLogged;
