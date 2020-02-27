@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SortOptionsComponent } from './components/sort-options/sort-options.component';
 import { SortServiceService } from './services/sortService/sort-service.service';
 import { RouterModule } from '@angular/router';
+import { AuthModuleModule } from '../auth-module/auth-module.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    AuthModuleModule
   ],
   exports: [HeaderComponent],
   providers: [SortServiceService]

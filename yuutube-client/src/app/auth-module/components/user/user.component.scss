@@ -1,0 +1,19 @@
+.header-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__login {
+    display: flex;
+    padding: 5px;
+    margin-right: 5px;
+    background-color: #2F80ED;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__name {
+    margin-right: 5px;
+  }
+}

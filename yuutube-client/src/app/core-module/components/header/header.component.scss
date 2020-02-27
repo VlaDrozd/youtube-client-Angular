@@ -1,21 +1,27 @@
 .header {
   background-color: #e5e5e5;
+  padding: 15px 156px;
 
   &-search {
+    width: 100%;
     display: flex;
-    justify-content: right;
     align-items: center;
-    padding: 15px 10vw;
 
     @media screen and (max-width: 500px) {
       padding: 15px 7px;
     }
 
     &-cover {
+      position: relative;
       width: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+
+      &__user {
+        position: absolute;
+        right: 0px
+      }
     }
 
     &__logo {
@@ -60,22 +66,5 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-
-  &-user {
-    width: fit-content;
-    margin-left: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__name {
-      width: max-content;
-      margin-right: 8px;
-      font-size: 12px;
-      line-height: 14px;
-      text-align: right;
-      color: #4f4f4f;
-    }
   }
 }

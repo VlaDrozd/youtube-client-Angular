@@ -9,12 +9,7 @@
       <button class="header-settings" (click)="isSettingsOpened = !isSettingsOpened">
         <img class="header-settings__icon" src="../../../assets/imgs/header-settings-icon.svg" alt="icon">
       </button>
-    </div>
-    <div class="header-user">
-      <p class="header-user__name">Your Name</p>
-      <a class="header-user__link" href="#">
-        <img src="../../../assets/imgs/header-user-link.png" alt="">
-      </a>
+      <app-user class="header-search-cover__user"></app-user>
     </div>
   </div>
   <div class="header-sortOptions" *ngIf="isSettingsOpened">
