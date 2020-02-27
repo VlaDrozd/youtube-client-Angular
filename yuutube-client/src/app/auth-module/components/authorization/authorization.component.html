@@ -1,1 +1,14 @@
-<p>authorization works!</p>
+<div class="cont">
+  <h2 class="cont__title">Login</h2>
+  <form #authForm="ngForm" class="form" (ngSubmit)="onSubmit(authForm)">
+    <div class="form-input">
+      <label class="form-input__label" for="login">login</label>
+      <input class="form-input__enter" type="text" id="login" name="login" required>
+    </div>
+    <div class="form-input">
+      <label class="form-input__label" for="pass">password</label>
+      <input class="form-input__enter" type="password" id="pass" name="pass" required>
+    </div>
+    <input [disabled]="authForm.invalid" type="submit" value="Login" class="form__login">
+  </form>
+</div>

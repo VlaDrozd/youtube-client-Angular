@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AuthorizationComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     AuthorizationComponent

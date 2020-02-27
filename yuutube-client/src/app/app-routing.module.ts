@@ -4,7 +4,6 @@ import { YoutubeModuleModule } from './youtube-module/youtube-module.module';
 import { SearchResultsComponent } from './youtube-module/components/search-results/search-results.component';
 import { AuthModuleModule } from './auth-module/auth-module.module';
 import { AuthorizationComponent } from './auth-module/components/authorization/authorization.component';
-import { CoreModuleModule } from './core-module/core-module.module';
 import { NotFound404Component } from './core-module/components/not-found404/not-found404.component';
 import { DetailedInformationComponent } from './youtube-module/components/detailed-information/detailed-information.component';
 
@@ -20,7 +19,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     YoutubeModuleModule,
     AuthModuleModule,
-    CoreModuleModule
   ],
   exports: [RouterModule]
 })
