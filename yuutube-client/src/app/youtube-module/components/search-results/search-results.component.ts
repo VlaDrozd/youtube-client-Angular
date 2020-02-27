@@ -10,7 +10,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class SearchResultsComponent implements OnInit {
 
-  constructor(private searchService: SearchService, private sortService: SortServiceService, private activatedRoute: ActivatedRoute) {
+  constructor(public searchService: SearchService, public sortService: SortServiceService, private activatedRoute: ActivatedRoute) {
   }
 
   public ngOnInit(): void {

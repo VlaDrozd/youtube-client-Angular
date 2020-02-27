@@ -12,7 +12,7 @@ export class SortOptionsComponent implements OnInit {
   // tslint:disable-next-line: no-any
   public debounce: any;
 
-  constructor(private sortService: SortServiceService) { }
+  constructor(public sortService: SortServiceService) { }
 
   public ngOnInit(): void {
   }

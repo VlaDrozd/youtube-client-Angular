@@ -14,7 +14,7 @@
               {{ (item.snippet.title | slice:0:17) + '...'  }}
             </h2>
             <p class="info-main__date">
-              {{ date | date:fullDate }}
+              {{ date | date:'fullDate' }}
             </p>
           </div>
           <div class="info-descr">

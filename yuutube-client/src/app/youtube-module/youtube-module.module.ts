@@ -14,7 +14,7 @@ import { SearchService } from './services/searchService/search.service';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'prefix' },
   { path: 'home', component: SearchResultsComponent},
-  { path: 'video/:id', component: DetailedInformationComponent}
+  { path: 'home/video/:id', component: DetailedInformationComponent}
 ];
 
 @NgModule({
