@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -8,24 +10,29 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   public isSettingsOpened: boolean = false;
-  public request: string = '';
+  public userQuestion: string;
+  public request: Subject<string> = new Subject<string>();
 
   constructor(private router: Router) { }
 
   public ngOnInit(): void {
-  }
-
-  public sendRequest(): void {
-    if (this.request) {
-      this.router.navigate(
-        ['/'],
-        {
-          queryParams: {
-            'search_query': this.request,
-          }
+    this.request.pipe(
+      filter(value => value.length >= 3),
+      debounceTime(1000),
+      distinctUntilChanged())
+      .subscribe(value => {
+        if (value) {
+          this.router.navigate(
+            ['/'],
+            {
+              queryParams: {
+                'search_query': value,
+              }
+            }
+          );
         }
+      }
       );
-    }
   }
 
 }
