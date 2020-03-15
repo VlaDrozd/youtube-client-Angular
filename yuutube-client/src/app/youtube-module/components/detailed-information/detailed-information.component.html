@@ -1,48 +1,50 @@
 <div class="cover">
-  <div class="content">
-    <button onclick="window.history.back()" class="back">
-      <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 2L3 10.2162L16 18" stroke="#F2F2F2" stroke-width="3" />
-      </svg>
-    </button>
-    <div class="info" [appColorByDate]="item.snippet.publishedAt">
-      <div class="info-cover">
-        <img src="{{ item.snippet.thumbnails.maxres.url }}" alt="prewiew" class="info__img">
-        <div class="info-text">
-          <div class="info-main">
-            <h2 class="info-main__title">
-              {{ (item.snippet.title | slice:0:17) + '...'  }}
-            </h2>
-            <p class="info-main__date">
-              {{ date | date:'fullDate' }}
-            </p>
-          </div>
-          <div class="info-descr">
-            <h2>Description:</h2>
-            <p>
-              {{ item.snippet.description }}
-            </p>
-          </div>
-          <div class="info-stats">
-            <div class="info-stats__element">
-              <img class="info-stats-element__icon" src="../../../../assets/imgs/views.svg" alt="views">
-              <p class="info-stats-element__count">{{ item.statistics.viewCount }}</p>
+  <ng-container *ngIf="item">
+    <div class="content">
+      <button onclick="window.history.back()" class="back">
+        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L3 10.2162L16 18" stroke="#F2F2F2" stroke-width="3" />
+        </svg>
+      </button>
+      <div class="info" [appColorByDate]="item.snippet.publishedAt">
+        <div class="info-cover">
+          <img src="{{ item.snippet.thumbnails.maxres.url }}" alt="prewiew" class="info__img">
+          <div class="info-text">
+            <div class="info-main">
+              <h2 class="info-main__title">
+                {{ (item.snippet.title | slice:0:17) + '...'  }}
+              </h2>
+              <p class="info-main__date">
+                {{ date | date:'fullDate' }}
+              </p>
             </div>
-            <div class="info-stats__element">
-              <img class="info-stats-element__icon" src="../../../../assets/imgs/likes.svg" alt="likes">
-              <p class="info-stats-element__count">{{ item.statistics.likeCount }}</p>
+            <div class="info-descr">
+              <h2>Description:</h2>
+              <p>
+                {{ item.snippet.description }}
+              </p>
             </div>
-            <div class="info-stats__element">
-              <img class="info-stats-element__icon" src="../../../../assets/imgs/dislikes.svg" alt="dislikes">
-              <p class="info-stats-element__count">{{ item.statistics.dislikeCount }}</p>
-            </div>
-            <div class="info-stats__element">
-              <img class="info-stats-element__icon" src="../../../../assets/imgs/comments.svg" alt="comments">
-              <p class="info-stats-element__count">{{ item.statistics.commentCount }}</p>
+            <div class="info-stats">
+              <div class="info-stats__element">
+                <img class="info-stats-element__icon" src="../../../../assets/imgs/views.svg" alt="views">
+                <p class="info-stats-element__count">{{ item.statistics.viewCount }}</p>
+              </div>
+              <div class="info-stats__element">
+                <img class="info-stats-element__icon" src="../../../../assets/imgs/likes.svg" alt="likes">
+                <p class="info-stats-element__count">{{ item.statistics.likeCount }}</p>
+              </div>
+              <div class="info-stats__element">
+                <img class="info-stats-element__icon" src="../../../../assets/imgs/dislikes.svg" alt="dislikes">
+                <p class="info-stats-element__count">{{ item.statistics.dislikeCount }}</p>
+              </div>
+              <div class="info-stats__element">
+                <img class="info-stats-element__icon" src="../../../../assets/imgs/comments.svg" alt="comments">
+                <p class="info-stats-element__count">{{ item.statistics.commentCount }}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 </div>

@@ -19,6 +19,7 @@ export class DetailedInformationComponent implements OnInit {
     this.searchService.getByID(this.route.snapshot.params.id).subscribe((data) => {
       this.item = data;
       this.date = new Date(this.item.snippet.publishedAt);
+      console.log('find');
     });
   }
 

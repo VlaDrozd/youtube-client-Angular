@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { searchRes } from '../../../../assets/response/response';
 import { SearchItem } from 'src/app/shared-module/models/search-item.model';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { SearchResponse } from '../../../shared-module/models/search-response.model';
@@ -32,6 +31,7 @@ export class SearchService {
 
     const sParams: HttpParams = this.searchParams.set('q', request);
 
+    // tslint:disable-next-line: no-any
     this.http.get<any>(this.searchURL, { params: sParams }).pipe(retry(4)).subscribe(
       (res1) => {
         const vParams: HttpParams = this.videosParams.set('id', res1.items.map(el => el.id.videoId).join(','));
