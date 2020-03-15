@@ -2,9 +2,15 @@
   <div class="header-search">
     <div class="header-search-cover">
       <img class="header-search__logo" src="../../../assets/imgs/logo.png" alt="logo">
+<<<<<<< HEAD:yuutube-client/src/app/core-module/components/header/header.component.html
       <form class="header-form" (submit)="sendRequest()">
         <input [(ngModel)]="request" name="search_query" class="header-form__text" type="text" placeholder="Search">
         <input class="header-form__submit" type="submit" value="search">
+=======
+      <form class="header-form">
+        <input class="header-form__text" type="text" placeholder="Search">
+        <input class="header-form__submit" type="submit" value="search" (click)="sendResponse.emit(searchResponse.items)">
+>>>>>>> 4514038af9fe815981835393cf8c6e573c102a90:yuutube-client/src/app/components/header/header.component.html
       </form>
       <button class="header-settings" (click)="isSettingsOpened = !isSettingsOpened">
         <img class="header-settings__icon" src="../../../assets/imgs/header-settings-icon.svg" alt="icon">
