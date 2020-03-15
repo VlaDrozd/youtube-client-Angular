@@ -6,8 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { UserComponent } from './components/user/user.component';
 
-import { AuthorizationService } from './services/auth-service/authorization.service';
-
 const routes: Routes = [
   {
     path: '', component: AuthorizationComponent
@@ -26,6 +24,5 @@ const routes: Routes = [
     UserComponent,
     RouterModule,
   ],
-  providers: [AuthorizationService]
 })
 export class AuthModuleModule { }
