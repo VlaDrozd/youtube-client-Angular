@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { SearchItem } from '../../shared-module/models/search-item.model';
 
 @Pipe({
-  name: 'sort'
+  name: 'sort',
+  pure: false
 })
 export class SortPipe implements PipeTransform {
 

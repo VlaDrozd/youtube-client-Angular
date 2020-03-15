@@ -1,6 +1,6 @@
 <div class="item" [appColorByDate] = "item.snippet.publishedAt">
   <div class="item-container">
-    <img class="item__preview" src="{{ item.snippet.thumbnails.standard.url }}" alt="preview">
+    <img class="item__preview" src="{{ item.snippet.thumbnails.default.url }}" alt="preview">
     <div class="item-stats">
       <div class="item-stats-element">
         <img class="item-stats-element__icon" src="../../../assets/imgs/views.svg" alt="views">
@@ -19,7 +19,7 @@
         <p class="item-stats-element__count">{{ item.statistics.commentCount }}</p>
       </div>
     </div>
-    <h2 class="item__title">{{ (item.snippet.title | slice:0:17) + '...' }}</h2>
+    <h2 class="item__title">{{ (item.snippet.title | slice:0:14) + '...' }}</h2>
     <a [routerLink]="['video', item.id]" class="item__link">more...</a>
   </div>
 </div>

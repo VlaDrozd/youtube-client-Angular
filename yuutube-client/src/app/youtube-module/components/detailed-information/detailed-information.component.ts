@@ -13,11 +13,14 @@ export class DetailedInformationComponent implements OnInit {
   public item: SearchItem;
   public date: Date;
 
-  constructor(private route: ActivatedRoute, private searchService: SearchService) { }
+  constructor(public route: ActivatedRoute, public searchService: SearchService) { }
 
   public ngOnInit(): void {
-    this.item = this.searchService.getByID(this.route.snapshot.params.id);
-    this.date = new Date(this.item.snippet.publishedAt);
+    this.searchService.getByID(this.route.snapshot.params.id).subscribe((data) => {
+      this.item = data;
+      this.date = new Date(this.item.snippet.publishedAt);
+      console.log('find');
+    });
   }
 
 }
