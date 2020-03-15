@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchItem } from './models/search-item.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title: string = 'yuutube-client';
+  public sortType: string = 'date';
+  public searchResponse: SearchItem[] = [];
+
+  public getSortType(type: string): void {
+    this.sortType = type;
+    console.log(type);
+  }
+
+  public getResponse(response: SearchItem[]): void {
+    this.searchResponse = response;
+  }
 }

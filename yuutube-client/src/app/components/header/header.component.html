@@ -1,1 +1,23 @@
-<p>header works!</p>
+<header class="header">
+  <div class="header-search">
+    <div class="header-search-cover">
+      <img class="header-search__logo" src="../../../assets/imgs/logo.png" alt="logo">
+      <form class="header-form">
+        <input class="header-form__text" type="text" placeholder="Search">
+        <input class="header-form__submit" type="submit" value="search" (click)="sendResponse.emit(searchResponse.items)">
+      </form>
+      <button class="header-settings" (click)="isSettingsOpened = !isSettingsOpened">
+        <img class="header-settings__icon" src="../../../assets/imgs/header-settings-icon.svg" alt="icon">
+      </button>
+    </div>
+    <div class="header-user">
+      <p class="header-user__name">Your Name</p>
+      <a class="header-user__link" href="#">
+        <img src="../../../assets/imgs/header-user-link.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="header-sortOptions" *ngIf="isSettingsOpened">
+    <app-sort-options (setSortType)="sendSortType.emit($event)"></app-sort-options>
+  </div>
+</header>

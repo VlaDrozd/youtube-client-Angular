@@ -1,1 +1,3 @@
-<p>search-results works!</p>
+<div class="container">
+  <app-search-item *ngFor="let item of response | sort:sortType" [item]="item"></app-search-item>
+</div>
