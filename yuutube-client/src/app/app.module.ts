@@ -1,26 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { CoreModuleModule } from './core-module/core-module.module';
+import { YoutubeModuleModule } from './youtube-module/youtube-module.module';
+
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SortOptionsComponent } from './components/sort-options/sort-options.component';
-import { SearchResultsComponent } from './components/search-results/search-results.component';
-import { SearchItemComponent } from './components/search-item/search-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SortOptionsComponent,
-    SearchResultsComponent,
-    SearchItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    CoreModuleModule,
+    YoutubeModuleModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

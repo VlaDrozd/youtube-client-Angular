@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchResponse } from './shared-module/models/search-response.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title: string = 'yuutube-client';
+
 }
