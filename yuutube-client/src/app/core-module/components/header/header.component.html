@@ -4,7 +4,6 @@
       <img class="header-search__logo" src="../../../assets/imgs/logo.png" alt="logo">
       <form class="header-form">
         <input [(ngModel)]="userQuestion" name="search_query" class="header-form__text" type="text" placeholder="Search" (ngModelChange)="this.request.next($event)">
-        <!-- <input class="header-form__submit" type="submit" value="search"> -->
       </form>
       <button class="header-settings" (click)="isSettingsOpened = !isSettingsOpened">
         <img class="header-settings__icon" src="../../../assets/imgs/header-settings-icon.svg" alt="icon">
